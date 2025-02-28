@@ -481,7 +481,7 @@ function App() {
         </section>
 
         {/* Body Block Section */}
-        <section className="text-white min-h-screen relative -mt-[43.2rem]">
+        <section className="text-white min-h-screen relative -mt-[47.2rem]">
           <div className="absolute inset-8 px-4">
             <img
                 src="/body_block.svg"
@@ -489,7 +489,7 @@ function App() {
                 className="w-full h-full object-contain outline-none -z-10 -mt-4 scale-[1.01]"
             />
           </div>
-          <div className="container mx-auto px-6 relative z-10 pt-72">
+          <div className="container mx-auto px-6 relative z-10 pt-[20rem]">
             <TypingText/>
             <div className="grid grid-cols-2 gap-32 mt-48">
               <div className="ml-[-40px]">
@@ -593,28 +593,33 @@ function App() {
                       </div>
 
                     </div>
-                    <div className="relative opacity-0 -translate-x-[40px] group-hover:translate-x-0 group-hover:translate-y-0  translate-y-[40px] group-hover:opacity-100 transition-all duration-300 flex w-[21rem] h-[21rem] items-center">
-                      <svg width="333" height="299" className="scale-[1.2] mt-8 absolute inset-0" viewBox="0 0 333 299"
-                           fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect width="333" height="299" fill="#FFDE00"/>
-                        <path d="M2 277.5L21.3946 297H2V277.5Z" fill="black"/>
-                        <path d="M41 297H21.3946M21.3946 297L2 277.5M21.3946 297H2V277.5M2 277.5L2.2108 258"
-                              stroke="#FFDE00"
-                              stroke-opacity="0.98" stroke-width="2"/>
-                      </svg>
-                      <div className="text-black flex flex-col gap-y-6 w-full z-[999] relative">
-                        <p className="text-[18px] font-bold">Technology Stack:</p>
-                        <ul className="flex flex-col gap-y-2">
-                          {['Programming Languages: Python, Go', 'Frameworks/Libraries: PyTorch, TensorFlow, Scikit-learn', 'Databases: PostgreSQL, Redis, Elasticsearch', 'Infrastructure: Docker, Kubernetes, AWS/GCP', 'Security: RSA, AES encryption, Blockchain-based key management'].map((item, i) => (
-                              <li className="text-[15px] font-medium flex items-start gap-x-1" key={i}><p
-                                  className="text-[2rem] -mt-3.5 leading-none">.</p>
+                    <div className="w-[34rem] px-10 h-[21rem] overflow-hidden">
+                      <div
+                          className="relative opacity-0 -translate-x-[2000px] group-hover:translate-x-0 group-hover:translate-y-0  translate-y-[1500px] group-hover:opacity-100 transition-all duration-[0.5s] flex w-[21rem] h-[21rem] items-center">
+                        <svg width="333" height="299" className="scale-[1.2] mt-8 absolute inset-0"
+                             viewBox="0 0 333 299"
+                             fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <rect width="333" height="299" fill="#FFDE00"/>
+                          <path d="M2 277.5L21.3946 297H2V277.5Z" fill="black"/>
+                          <path d="M41 297H21.3946M21.3946 297L2 277.5M21.3946 297H2V277.5M2 277.5L2.2108 258"
+                                stroke="#FFDE00"
+                                stroke-opacity="0.98" stroke-width="2"/>
+                        </svg>
+                        <div className="text-black flex flex-col gap-y-6 w-full z-[999] relative">
+                          <p className="text-[18px] font-bold">Technology Stack:</p>
+                          <ul className="flex flex-col gap-y-2">
+                            {['Programming Languages: Python, Go', 'Frameworks/Libraries: PyTorch, TensorFlow, Scikit-learn', 'Databases: PostgreSQL, Redis, Elasticsearch', 'Infrastructure: Docker, Kubernetes, AWS/GCP', 'Security: RSA, AES encryption, Blockchain-based key management'].map((item, i) => (
+                                <li className="text-[15px] font-medium flex items-start gap-x-1" key={i}><p
+                                    className="text-[2rem] -mt-3.5 leading-none">.</p>
 
-                                {item}</li>
-                          ))}
-                        </ul>
+                                  {item}</li>
+                            ))}
+                          </ul>
 
+                        </div>
                       </div>
                     </div>
+
                   </div>
 
               ))}
