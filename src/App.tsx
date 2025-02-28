@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import {  Globe2 } from 'lucide-react';
 import './styles/animations.css';
 
 const arr = [
@@ -16,7 +15,8 @@ const arr = [
           fill="#FFDE00"/>
     </svg>,
     title: 'Vector Database Infrastructure',
-    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.'
+    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.',
+    texts: ['Programming Languages: Python, Go', 'Frameworks/Libraries: PyTorch, TensorFlow, Scikit-learn', 'Databases: PostgreSQL, Redis, Elasticsearch', 'Infrastructure: Docker, Kubernetes, AWS/GCP', 'Security: RSA, AES encryption, Blockchain-based key management',]
   },
   {
     icon: <svg width="214" height="172" viewBox="0 0 214 172" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,7 +32,8 @@ const arr = [
     </svg>
     ,
     title: 'Vector Database Infrastructure',
-    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.'
+    description: 'Infrastructure solution enabling interoperability between TON and other blockchain networks. The system implements bidirectional bridge technology with omni-signatures for secure cross-chain transactions. It features comprehensive support for major blockchain protocols, an automated transaction validation system, and enhanced security through multi-signature smart contracts.',
+    texts: ['Blockchain Protocols: TON, Ethereum, Binance Smart Chain (BSC)','Programming Languages: Solidity, Rust, JavaScript/TypeScript','Smart Contract Tools: Hardhat, Truffle, TON SDK','Infrastructure: Node.js, Web3.js, Docker','Security: ZK-proofs, Multi-sig wallets, Omnichain solutions']
   },
   {
     icon: <svg width="182" height="175" viewBox="0 0 182 175" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +50,8 @@ const arr = [
     </svg>
     ,
     title: 'Vector Database Infrastructure',
-    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.'
+    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.',
+    texts: ['Programming Languages: Python', 'Frameworks/Libraries: Hugging Face Transformers, NLTK, Spacy, BERT', 'Data Sources: Social media APIs (Twitter, Discord, Telegram), news aggregators', 'Databases: MongoDB, PostgreSQL', 'Infrastructure: AWS Lambda, Apache Kafka, Docker', 'AI Models: Sentiment analysis models, fine-tuned GPT-based architectures']
   },
   {
     icon: <svg width="157" height="172" viewBox="0 0 157 172" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -62,7 +64,8 @@ const arr = [
     </svg>
     ,
     title: 'Vector Database Infrastructure',
-    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.'
+    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.',
+    texts: ['Programming Languages: Python, C++', 'Frameworks/Libraries: PyTorch, OpenCV, SciPy, NumPy, GANs (e.g., StyleGAN, CycleGAN)', 'Data Types: Image (JPEG/PNG), Video (MP4), Text (JSON, XML), Audio (WAV, MP3)', 'Infrastructure: TensorFlow Serving, Kubernetes, NVIDIA CUDA', 'Tools: Data Augmentation Libraries, Synthetic Data Generators']
   },
   {
     icon: <svg width="167" height="185" viewBox="0 0 167 185" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -87,7 +90,8 @@ const arr = [
     </svg>
     ,
     title: 'Vector Database Infrastructure',
-    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.'
+    description: 'A platform for AI developers that simplifies vector database creation and management. Built on a distributed storage architecture, it seamlessly integrates with popular AI frameworks while providing cryptographic API-level protection. The API enables decentralized data storage with robust security measures for fast retrieval and analysis.',
+    texts: ['Programming Languages: Python, JavaScript', 'Frameworks/Libraries: TensorFlow, React.js', 'Blockchain Platforms: Ethereum, Binance Smart Chain', ' Smart Contract Languages: Solidity', 'Databases: MongoDB', 'Infrastructure: Docker, Kubernetes', 'AI Technologies: Reinforcement Learning, Natural Language Processing']
   }
 ]
 
@@ -261,7 +265,7 @@ function App() {
       <>
         <div className="min-h-screen bg-black">
           {/* Hero Section */}
-          <div className="bg-black text-white min-h-screen relative overflow-hidden">
+          <div id="about" className="bg-black text-white min-h-screen relative overflow-hidden">
             {/* Dot Pattern Background */}
             <div className="dot-pattern"></div>
 
@@ -302,7 +306,7 @@ function App() {
         </div>
 
         {/* Features Section */}
-        <section id="features" className="bg-black text-white min-h-screen relative">
+        <section id="services" className="bg-black text-white min-h-screen relative">
           {/* Frame */}
           <div className="absolute inset-0">
             {/* Top left corner */}
@@ -322,7 +326,7 @@ function App() {
             <div className="absolute bottom-8 right-8 w-[2px] h-[40px] bg-[#FFDE00]"></div>
           </div>
 
-          <div className="pl-8 md:pl-16 pr-8 md:pr-16 py-20 relative z-10">
+          <div  className="pl-8 md:pl-16 pr-8 md:pr-16 py-20 relative z-10">
             <p className="text-white text-xl mb-16 font-['Unbounded']">(SERVICES SECTION)</p>
             
             {/* Services Grid */}
@@ -593,9 +597,9 @@ function App() {
                       </div>
 
                     </div>
-                    <div className="w-[34rem] px-10 h-[21rem] overflow-hidden">
+                    <div className="w-[34rem] px-10 h-[23rem] overflow-hidden">
                       <div
-                          className="relative opacity-0 -translate-x-[2000px] group-hover:translate-x-0 group-hover:translate-y-0  translate-y-[1500px] group-hover:opacity-100 transition-all duration-[0.5s] flex w-[21rem] h-[21rem] items-center">
+                          className="relative opacity-0 -translate-x-[2000px] group-hover:translate-x-0 group-hover:translate-y-0  translate-y-[1500px] group-hover:opacity-100 transition-all duration-[0.5s] flex w-[21rem] h-[23rem] items-center">
                         <svg width="333" height="299" className="scale-[1.2] mt-8 absolute inset-0"
                              viewBox="0 0 333 299"
                              fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -608,7 +612,7 @@ function App() {
                         <div className="text-black flex flex-col gap-y-6 w-full z-[999] relative">
                           <p className="text-[18px] font-bold">Technology Stack:</p>
                           <ul className="flex flex-col gap-y-2">
-                            {['Programming Languages: Python, Go', 'Frameworks/Libraries: PyTorch, TensorFlow, Scikit-learn', 'Databases: PostgreSQL, Redis, Elasticsearch', 'Infrastructure: Docker, Kubernetes, AWS/GCP', 'Security: RSA, AES encryption, Blockchain-based key management'].map((item, i) => (
+                            {item.texts.map((item, i) => (
                                 <li className="text-[15px] font-medium flex items-start gap-x-1" key={i}><p
                                     className="text-[2rem] -mt-3.5 leading-none">.</p>
 
@@ -632,7 +636,7 @@ function App() {
 
           {/* Footer */
           }
-          <footer className="bg-[#FFDE00] relative h-[55rem] px-[4rem] py-[3.5rem]">
+          <footer id="contacts" className="bg-[#FFDE00] relative h-[55rem] px-[4rem] py-[3.5rem]">
             <div className="flex flex-col gap-y-[27px]">
               <p className="text-[68px] font-medium leading-[5rem]">Ready to accelerate <br/> your project? </p>
               <p className="text-[78px] font-bold">Let's talk.</p>
@@ -658,16 +662,16 @@ function App() {
             </div>
             <div className="absolute bottom-20 left-20 pr-8 md:pr-16 z-50">
               <nav className="flex flex-col items-end space-y-2">
-                <a href="#about" className="menu-link text-gray-500 font-['Unbounded'] text-base md:text-lg">about
+                <a href="#about" className="menu-link-bottom text-gray-500 hover:text-black font-['Unbounded'] text-base md:text-lg">about
                   us</a>
                 <a href="#services"
-                   className="menu-link text-gray-500 font-['Unbounded'] text-base md:text-lg hover:text-yellow-400 transition-colors">services</a>
+                   className="menu-link-bottom text-gray-500 font-['Unbounded'] text-base md:text-lg hover:text-black transition-colors">services</a>
                 <a href="#partners"
-                   className="menu-link text-gray-500 font-['Unbounded'] text-base md:text-lg hover:text-yellow-400 transition-colors">partners</a>
+                   className="menu-link-bottom text-gray-500 font-['Unbounded'] text-base md:text-lg hover:text-black transition-colors">partners</a>
                 <a href="#steps"
-                   className="menu-link text-gray-500 font-['Unbounded'] text-base md:text-lg hover:text-yellow-400 transition-colors">Steps</a>
+                   className="menu-link-bottom text-gray-500 font-['Unbounded'] text-base md:text-lg hover:text-black transition-colors">Steps</a>
                 <a href="#contacts"
-                   className="menu-link text-gray-500 font-['Unbounded'] text-base md:text-lg hover:text-yellow-400 transition-colors">Contacts</a>
+                   className="menu-link-bottom after:!bg-black text-gray-500 font-['Unbounded'] text-base md:text-lg hover:text-black transition-colors">Contacts</a>
               </nav>
             </div>
             <img

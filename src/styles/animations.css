@@ -46,6 +46,25 @@
   background-size: contain;
 }
 
+.menu-link-bottom {
+  position: relative;
+}
+
+.menu-link-bottom::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: black;
+  transition: width 0.3s ease;
+}
+
+.menu-link-bottom:hover::after {
+  width: 100%;
+}
+
 .menu-link {
   position: relative;
 }
