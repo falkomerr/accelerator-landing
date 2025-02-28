@@ -87,7 +87,11 @@
 .cursor-glow {
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(250, 204, 21, 0.15) 0%, rgba(250, 204, 21, 0) 70%);
+  background: radial-gradient(
+    circle,
+    rgba(250, 204, 21, 0.15) 0%,
+    rgba(250, 204, 21, 0) 70%
+  );
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -102,10 +106,16 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: 
-    radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 60%, black 100%),
+  background-image: radial-gradient(
+      circle at center,
+      transparent 0%,
+      rgba(0, 0, 0, 0.8) 60%,
+      black 100%
+    ),
     radial-gradient(#facc15 1px, transparent 1px);
-  background-size: 100% 100%, 8px 8px;
+  background-size:
+    100% 100%,
+    8px 8px;
   opacity: 0.1;
   pointer-events: none;
   z-index: 0;
@@ -314,11 +324,15 @@
 }
 
 .typewriter-1 {
-  animation: blink-cursor 0.8s steps(4) infinite, reveal 0s 1s forwards;
+  animation:
+    blink-cursor 0.8s steps(4) infinite,
+    reveal 0s 1s forwards;
 }
 
 .typewriter-2 {
-  animation: blink-cursor 0.8s steps(7) infinite, reveal 0s 2s forwards;
+  animation:
+    blink-cursor 0.8s steps(7) infinite,
+    reveal 0s 2s forwards;
 }
 
 .typewriter-2::before {
@@ -326,7 +340,9 @@
 }
 
 .typewriter-3 {
-  animation: blink-cursor 0.8s steps(9) infinite, reveal 0s 3s forwards;
+  animation:
+    blink-cursor 0.8s steps(9) infinite,
+    reveal 0s 3s forwards;
 }
 
 .typewriter-3::before {
@@ -349,4 +365,4 @@
   to {
     opacity: 1;
   }
-} 
+}

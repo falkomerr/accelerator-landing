@@ -16,7 +16,7 @@
 .corner::after {
   content: '';
   position: absolute;
-  background: #FFDE00;
+  background: #ffde00;
 }
 
 .top-left {
@@ -88,8 +88,12 @@
 }
 
 @keyframes fadeInLeft {
-  0% { opacity: 0; transform: translateX(-20px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-
-
