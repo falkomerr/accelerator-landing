@@ -73,7 +73,7 @@ const arr = [
         <path
           d="M116.213 0.837128L1.43122 45.11L1.43122 63.7478L116.213 18.655L116.213 0.837128Z"
           stroke="#FFDE00"
-          stroke-width="1.14782"
+          strokeWidth="1.14782"
         />
         <path
           d="M69.0707 127.175L185 81.6309L185 101.504L69.0707 146.22L69.0707 127.175Z"
@@ -82,7 +82,7 @@ const arr = [
         <path
           d="M69.6446 37.5676L184.426 81.8405L184.426 100.478L69.6446 55.3855L69.6446 37.5676Z"
           stroke="#FFDE00"
-          stroke-width="1.14782"
+          strokeWidth="1.14782"
         />
         <path
           d="M16.3544 190.098L7.65366 167.54H11.3595L18.2879 185.586L25.2163 167.54H28.9222L20.2214 190.098H16.3544ZM41.5176 185.264L43.4511 187.52C43.043 188.057 42.5059 188.54 41.8399 188.97C40.379 189.937 38.7141 190.42 36.845 190.42C34.5893 190.42 32.6772 189.647 31.109 188.1C29.5622 186.531 28.7888 184.619 28.7888 182.364C28.7888 180.108 29.5514 178.207 31.0767 176.66C32.6235 175.092 34.4926 174.307 36.6839 174.307C38.8752 174.307 40.6798 175.027 42.0977 176.466C43.5371 177.884 44.2568 179.689 44.2568 181.88C44.2568 182.074 44.2245 182.46 44.1601 183.04L44.0956 183.492H32.1724C32.3657 184.587 32.9028 185.511 33.7836 186.263C34.6645 186.993 35.7386 187.359 37.0061 187.359C38.1662 187.359 39.2619 187.015 40.2931 186.327C40.7657 186.027 41.1739 185.672 41.5176 185.264ZM32.1724 180.752H40.8731C40.6153 179.657 40.132 178.797 39.423 178.174C38.7141 177.53 37.801 177.208 36.6839 177.208C34.4067 177.208 32.9028 178.389 32.1724 180.752ZM59.2276 185.103L61.4833 187.197C61.0322 187.777 60.4736 188.315 59.8076 188.809C58.3038 189.883 56.6603 190.42 54.8772 190.42C52.6214 190.42 50.7094 189.647 49.1411 188.1C47.5943 186.531 46.8209 184.619 46.8209 182.364C46.8209 180.108 47.5943 178.207 49.1411 176.66C50.7094 175.092 52.6214 174.307 54.8772 174.307C56.7033 174.307 58.3253 174.823 59.7432 175.854C60.3877 176.327 60.914 176.832 61.3222 177.369L59.0664 179.463C58.7657 179.055 58.4112 178.711 58.003 178.432C56.9933 177.723 55.9513 177.369 54.8772 177.369C53.5022 177.369 52.3529 177.841 51.4291 178.787C50.5053 179.71 50.0434 180.903 50.0434 182.364C50.0434 183.825 50.5053 185.028 51.4291 185.973C52.3529 186.897 53.5022 187.359 54.8772 187.359C56.1017 187.359 57.1652 186.983 58.0675 186.231C58.4542 185.93 58.8409 185.554 59.2276 185.103ZM66.1408 185.264V177.691H63.2406V174.63H65.013C65.5286 174.63 65.8938 174.501 66.1086 174.243C66.3449 173.964 66.4631 173.502 66.4631 172.857V169.474H69.3633V174.63H72.9081V177.691H69.3633V184.942C69.3633 186.553 70.1153 187.359 71.6191 187.359C72.0488 187.359 72.4677 187.283 72.8759 187.133L73.3915 186.875V189.937L72.7147 190.194C72.2206 190.345 71.6406 190.42 70.9746 190.42C69.4278 190.42 68.2355 189.979 67.3976 189.099C66.5598 188.218 66.1408 186.94 66.1408 185.264ZM78.2821 188.1C76.7353 186.531 75.9619 184.619 75.9619 182.364C75.9619 180.108 76.7353 178.207 78.2821 176.66C79.8504 175.092 81.7624 174.307 84.0182 174.307C86.2739 174.307 88.1752 175.092 89.722 176.66C91.2903 178.207 92.0744 180.108 92.0744 182.364C92.0744 184.619 91.2903 186.531 89.722 188.1C88.1752 189.647 86.2739 190.42 84.0182 190.42C81.7624 190.42 79.8504 189.647 78.2821 188.1ZM80.5701 185.973C81.4939 186.897 82.6432 187.359 84.0182 187.359C85.3931 187.359 86.5425 186.897 87.4663 185.973C88.39 185.028 88.8519 183.825 88.8519 182.364C88.8519 180.903 88.39 179.71 87.4663 178.787C86.5425 177.841 85.3931 177.369 84.0182 177.369C82.6432 177.369 81.4939 177.841 80.5701 178.787C79.6463 179.71 79.1844 180.903 79.1844 182.364C79.1844 183.825 79.6463 185.028 80.5701 185.973ZM95.6217 190.098V174.63H98.8442V176.724C99.2739 176.209 99.6713 175.811 100.037 175.532C101.068 174.716 102.228 174.307 103.517 174.307H104.322V177.691L103.904 177.627C103.388 177.562 103.098 177.53 103.033 177.53C101.895 177.53 100.907 177.981 100.069 178.883C99.2524 179.764 98.8442 180.871 98.8442 182.203V190.098H95.6217ZM114.162 190.098L105.462 167.54H109.168L116.096 185.586L123.024 167.54H126.73L118.029 190.098H114.162ZM136.587 190.098V187.842C136.286 188.293 135.878 188.723 135.362 189.131C134.202 189.99 132.945 190.42 131.592 190.42C130.088 190.42 128.853 189.979 127.886 189.099C126.919 188.218 126.436 187.154 126.436 185.908C126.436 184.641 126.833 183.577 127.628 182.718C128.444 181.859 129.551 181.311 130.947 181.075L136.587 180.108C136.587 179.27 136.286 178.583 135.684 178.045C135.083 177.487 134.309 177.208 133.364 177.208C132.419 177.208 131.441 177.562 130.432 178.271C130.066 178.529 129.701 178.873 129.336 179.302L127.241 177.208C127.671 176.649 128.187 176.166 128.788 175.758C130.142 174.791 131.667 174.307 133.364 174.307C135.276 174.307 136.823 174.877 138.004 176.015C139.207 177.132 139.809 178.55 139.809 180.269V190.098H136.587ZM136.587 183.169V182.686L132.075 183.492C130.464 183.771 129.658 184.469 129.658 185.586C129.658 186.166 129.884 186.66 130.335 187.069C130.808 187.477 131.441 187.681 132.236 187.681C133.461 187.681 134.492 187.251 135.33 186.392C136.168 185.532 136.587 184.458 136.587 183.169ZM144.305 183.653V174.63H147.528V183.653C147.528 184.791 147.85 185.694 148.495 186.36C149.161 187.026 150.02 187.359 151.073 187.359C152.297 187.359 153.296 186.961 154.07 186.166C154.864 185.35 155.262 184.297 155.262 183.008V174.63H158.484V190.098H155.262V187.842C154.897 188.336 154.489 188.766 154.037 189.131C152.963 189.99 151.76 190.42 150.428 190.42C148.624 190.42 147.152 189.818 146.013 188.615C144.875 187.391 144.305 185.737 144.305 183.653ZM163.16 190.098V167.54H166.382V190.098H163.16ZM172.666 185.264V177.691H169.766V174.63H171.538C172.054 174.63 172.419 174.501 172.634 174.243C172.87 173.964 172.988 173.502 172.988 172.857V169.474H175.888V174.63H179.433V177.691H175.888V184.942C175.888 186.553 176.64 187.359 178.144 187.359C178.574 187.359 178.993 187.283 179.401 187.133L179.917 186.875V189.937L179.24 190.194C178.746 190.345 178.166 190.42 177.5 190.42C175.953 190.42 174.761 189.979 173.923 189.099C173.085 188.218 172.666 186.94 172.666 185.264Z"
@@ -411,33 +411,8 @@ function App() {
 
     window.addEventListener('mousemove', handleMouseMove);
 
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const stepsSection = document.getElementById('steps');
-
-      if (stepsSection) {
-        const stepsSectionTop = stepsSection.offsetTop;
-        const stepsSectionHeight = stepsSection.offsetHeight;
-        const stepHeight = stepsSectionHeight / 9; // Разделим секцию на 9 частей
-
-        const relativeScroll = scrollPosition - stepsSectionTop;
-        const currentStepNumber = Math.floor(relativeScroll / stepHeight) + 1;
-
-        if (
-          currentStepNumber >= 1 &&
-          currentStepNumber <= 9 &&
-          currentStepNumber !== currentStep
-        ) {
-          setCurrentStep(currentStepNumber);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
-      window.removeEventListener('scroll', handleScroll);
       document.body.removeChild(cursor);
     };
   }, [currentStep]);
@@ -496,15 +471,23 @@ function App() {
           </div>
           <div className="absolute bottom-0 left-0 mb-4 pl-8 md:mb-12 md:pl-16">
             <h1 className="font-['Alumni_Sans'] text-6xl font-bold leading-[1] md:text-[15rem]">
-              <TypingAnimation text="YOUR" className="text-yellow-400" />
               <TypingAnimation
+                duration={100}
+                text="YOUR"
+                className="h-[240px] text-yellow-400"
+              />
+              <TypingAnimation
+                duration={100}
+                delayStartup={450}
                 text="SUCCESS"
-                className="-mt-6 block text-transparent md:-mt-20"
+                className="-mt-6 block h-[240px] text-transparent md:-mt-20"
                 style={{ WebkitTextStroke: '2px #facc15' }}
               />
               <TypingAnimation
+                duration={100}
+                delayStartup={1100}
                 text="CONCIERGE"
-                className="-mt-6 block text-yellow-400 md:-mt-20"
+                className="-mt-6 block h-[240px] text-yellow-400 md:-mt-20"
               />
             </h1>
           </div>
@@ -734,11 +717,6 @@ function App() {
               </h2>
               <div className="absolute left-[40%] -mt-20">
                 <div className="mb-4 flex items-center">
-                  <img
-                    src="/mouse_scroll.svg"
-                    alt="Mouse scroll"
-                    className="absolute -left-16 h-12 w-12"
-                  />
                   <h3 className="font-['Unbounded'] text-4xl font-bold text-[#000000]">
                     {stepTexts[currentStep].title}
                   </h3>
@@ -750,7 +728,9 @@ function App() {
             </div>
             <svg
               width="51"
-              onClick={() => setCurrentStep((prev) => prev - 1)}
+              onClick={() =>
+                setCurrentStep((prev) => (prev > 1 ? prev - 1 : prev))
+              }
               height="51"
               viewBox="0 0 51 51"
               fill="none"
@@ -760,13 +740,17 @@ function App() {
               <path
                 d="M34.5693 25.1038H15.6385M15.6385 25.1038L22.6346 18.1077M15.6385 25.1038L22.6346 32.1"
                 stroke="black"
-                stroke-width="1.64615"
+                strokeWidth="1.64615"
               />
             </svg>
 
             <svg
               width="51"
-              onClick={() => setCurrentStep((prev) => prev + 1)}
+              onClick={() =>
+                setCurrentStep((prev) =>
+                  prev + 1 < stepTexts.length ? prev + 1 : prev,
+                )
+              }
               height="51"
               viewBox="0 0 51 51"
               className="absolute -bottom-[35rem] left-[43%] z-[99999] cursor-pointer hover:opacity-90"
@@ -776,14 +760,14 @@ function App() {
               <path
                 d="M16.4307 25.1038H35.3615M35.3615 25.1038L28.3654 18.1077M35.3615 25.1038L28.3654 32.1"
                 stroke="black"
-                stroke-width="1.64615"
+                strokeWidth="1.64615"
               />
             </svg>
           </div>
         </section>
 
         {/* Head Block Section */}
-        <section className="relative -mt-[28.6rem] min-h-screen text-white">
+        <section className="relative -mt-[28.6rem] min-h-screen select-none text-white">
           <div className="absolute inset-8 px-4">
             <img
               src="/head_block.svg"
@@ -802,7 +786,7 @@ function App() {
               className="-mt-4 h-full w-full scale-[1.01] object-contain outline-none"
             />
           </div>
-          <div className="container relative z-10 mx-auto px-6 pt-[20rem]">
+          <div className="container relative z-10 mx-auto select-none px-6 pt-[20rem]">
             <TypingText />
             <div className="mt-48 grid grid-cols-2 gap-32">
               <div className="ml-[-40px]">
@@ -895,7 +879,7 @@ function App() {
               <path
                 d="M1311 1L1296 16M1296 16V1.5M1296 16H1310.5"
                 stroke="#FFDE00"
-                stroke-width="2"
+                strokeWidth="2"
               />
               <path d="M1 27H1311" stroke="#FFDE00" />
             </svg>
@@ -915,8 +899,8 @@ function App() {
                       <path
                         d="M29.2105 1H9.6051L1 10.211L1.21081 30.211"
                         stroke="#FFDE00"
-                        stroke-opacity="0.98"
-                        stroke-width="2"
+                        strokeOpacity="0.98"
+                        strokeWidth="2"
                       />
                     </svg>
                     <svg
@@ -929,8 +913,8 @@ function App() {
                       <path
                         d="M0 1H19.6054L28.2105 10.211L27.9997 30.211"
                         stroke="#FFDE00"
-                        stroke-opacity="0.98"
-                        stroke-width="2"
+                        strokeOpacity="0.98"
+                        strokeWidth="2"
                       />
                     </svg>
                     <svg
@@ -944,8 +928,8 @@ function App() {
                         d="M0 40H19.6054M19.6054 40L39 20.5M19.6054 40H39V20.5M39 20.5L38.7892 1"
                         fill="#FFDE00"
                         stroke="#FFDE00"
-                        stroke-opacity="0.98"
-                        stroke-width="2"
+                        strokeOpacity="0.98"
+                        strokeWidth="2"
                       />
                     </svg>
                     <svg
@@ -958,8 +942,8 @@ function App() {
                       <path
                         d="M1 0L1 19.6054L10.211 28.2105L30.211 27.9997"
                         stroke="#FFDE00"
-                        stroke-opacity="0.98"
-                        stroke-width="2"
+                        strokeOpacity="0.98"
+                        strokeWidth="2"
                       />
                     </svg>
 
@@ -984,8 +968,8 @@ function App() {
                         <path
                           d="M41 297H21.3946M21.3946 297L2 277.5M21.3946 297H2V277.5M2 277.5L2.2108 258"
                           stroke="#FFDE00"
-                          stroke-opacity="0.98"
-                          stroke-width="2"
+                          strokeOpacity="0.98"
+                          strokeWidth="2"
                         />
                       </svg>
                       <div className="relative z-[999] flex w-full flex-col gap-y-6 text-black">
@@ -1038,7 +1022,7 @@ function App() {
                   height="78"
                   rx="14"
                   stroke="black"
-                  stroke-width="2"
+                  strokeWidth="2"
                 />
                 <rect x="30" width="69" height="19" fill="#FFDE00" />
                 <path
@@ -1058,9 +1042,9 @@ function App() {
                 <path
                   d="M17 31H45.5M45.5 31L36.5 22M45.5 31L36.5 40"
                   stroke="#FFDE00"
-                  stroke-width="4"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </svg>
             </div>

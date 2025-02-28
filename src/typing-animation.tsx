@@ -7,6 +7,7 @@ interface TypingAnimationProps {
   duration?: number;
   className?: string;
   style?: React.CSSProperties;
+  delayStartup?: number;
 }
 
 export function TypingAnimation({
@@ -14,11 +15,23 @@ export function TypingAnimation({
   duration = 200,
   className,
   style,
+  delayStartup = 0,
 }: TypingAnimationProps) {
   const [displayedText, setDisplayedText] = useState<string>('');
   const [i, setI] = useState<number>(0);
+  const [started, setStarted] = useState(false);
 
   useEffect(() => {
+    const t = setTimeout(() => {
+      setStarted(true);
+    }, delayStartup);
+
+    return () => clearTimeout(t);
+  }, [delayStartup]);
+
+  useEffect(() => {
+    if (!started) return;
+
     const typingEffect = setInterval(() => {
       if (i < text.length) {
         setDisplayedText(text.substring(0, i + 1));
@@ -31,11 +44,11 @@ export function TypingAnimation({
     return () => {
       clearInterval(typingEffect);
     };
-  }, [duration, i]);
+  }, [duration, i, text, started]);
 
   return (
     <p style={style} className={className}>
-      {displayedText ? displayedText : text}
+      {displayedText}
     </p>
   );
 }
