@@ -475,7 +475,7 @@ function App() {
             <img 
               src="/head_block.svg" 
               alt="Head Block diagram" 
-              className="w-full h-full object-contain outline-none -z-10"
+              className="w-full h-full object-contain outline-none scale-[1.01]  -z-10"
             />
           </div>
         </section>
@@ -486,7 +486,7 @@ function App() {
             <img
                 src="/body_block.svg"
                 alt="Body Block diagram"
-                className="w-full h-full object-contain outline-none -z-10 -mt-1 scale-[1.007]"
+                className="w-full h-full object-contain outline-none -z-10 -mt-4 scale-[1.01]"
             />
           </div>
           <div className="container mx-auto px-6 relative z-10 pt-72">
@@ -498,16 +498,24 @@ function App() {
                   +
                 </p>
                 <div className="mt-4">
+                  <svg width="20" height="20" className="mb-2" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 19.5L19.3946 0H0V19.5Z" fill="#FFDE00"/>
+                  </svg>
+
                   <p className="text-[#FFDE00] text-2xl font-['Unbounded']">Successful</p>
                   <p className="text-[#FFDE00] text-2xl font-['Unbounded']">Token Launches</p>
                 </div>
               </div>
               <div>
                 <p className="text-[#FFDE00] text-[320px] font-['Unbounded'] font-bold leading-none">
-                  <AnimatedNumber end={80}/>
+                <AnimatedNumber end={80}/>
                   +
                 </p>
                 <div className="mt-4">
+                  <svg width="20" height="20" className="mb-2" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 19.5L19.3946 0H0V19.5Z" fill="#FFDE00"/>
+                  </svg>
+
                   <p className="text-[#FFDE00] text-2xl font-['Unbounded']">Projects</p>
                   <p className="text-[#FFDE00] text-2xl font-['Unbounded']">Supported</p>
                 </div>
@@ -516,13 +524,14 @@ function App() {
             </div>
 
           </div>
-          <div className="flex z-[999] relative mt-12 gap-x-[4rem] items-end justify-center bg-[#FFDE00] w-[calc(100%-4.2rem)] mx-auto">
-            <p className="text-black text-[320px] font-['Unbounded'] font-bold leading-none">
+          <div
+              className="flex z-[999] relative mt-12 gap-x-[4rem] items-end justify-center scale-[0.995]  bg-[#FFDE00] w-[calc(100%-4.2rem)] mx-auto">
+            <p className="text-black text-[320px] font-['tt'] font-bold leading-none">
               $
               <AnimatedNumber end={10}/>
               M+
             </p>
-            <div className="flex flex-col mb-8 text-[30px] font-['Unbounded'] text-black  gap-y-1">
+            <div className="flex flex-col mb-11 text-[30px] font-['Unbounded'] text-black  gap-y-1">
               <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M-6.10352e-05 19.5L19.3945 0H-6.10352e-05V19.5Z" fill="black"/>
               </svg>
@@ -552,64 +561,72 @@ function App() {
           <div className="flex mt-[2rem] w-full gap-x-[8rem]">
             <div className="flex flex-col gap-y-[2rem]">
               {arr.map((item, i) => (
-                  <div key={i} className="flex px-[4rem] gap-x-24 w-[800px] relative py-[5rem]">
-                    <svg width="30" className="absolute top-0 left-0" height="31" viewBox="0 0 30 31" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <path d="M29.2105 1H9.6051L1 10.211L1.21081 30.211" stroke="#FFDE00" stroke-opacity="0.98"
-                            stroke-width="2"/>
-                    </svg>
-                    <svg width="30" className="absolute top-0 right-0" height="31" viewBox="0 0 30 31" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 1H19.6054L28.2105 10.211L27.9997 30.211" stroke="#FFDE00" stroke-opacity="0.98"
-                            stroke-width="2"/>
-                    </svg>
-                    <svg width="40" className="absolute bottom-0 right-0 " height="41" viewBox="0 0 40 41" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 40H19.6054M19.6054 40L39 20.5M19.6054 40H39V20.5M39 20.5L38.7892 1" fill="#FFDE00"
-                            stroke="#FFDE00"
-                            stroke-opacity="0.98" stroke-width="2"/>
-                    </svg>
-                    <svg width="31" className="absolute bottom-0 left-0" height="30" viewBox="0 0 31 30" fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 0L1 19.6054L10.211 28.2105L30.211 27.9997" stroke="#FFDE00" stroke-opacity="0.98"
-                            stroke-width="2"/>
-                    </svg>
+                  <div key={i} className="flex gap-x-40 w-full group">
+                    <div className="flex px-[4rem]  gap-x-24 w-[800px] relative py-[5rem]">
+                      <svg width="30" className="absolute top-0 left-0" height="31" viewBox="0 0 30 31" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M29.2105 1H9.6051L1 10.211L1.21081 30.211" stroke="#FFDE00" stroke-opacity="0.98"
+                              stroke-width="2"/>
+                      </svg>
+                      <svg width="30" className="absolute top-0 right-0" height="31" viewBox="0 0 30 31" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 1H19.6054L28.2105 10.211L27.9997 30.211" stroke="#FFDE00" stroke-opacity="0.98"
+                              stroke-width="2"/>
+                      </svg>
+                      <svg width="40" className="absolute bottom-0 right-0 " height="41" viewBox="0 0 40 41" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 40H19.6054M19.6054 40L39 20.5M19.6054 40H39V20.5M39 20.5L38.7892 1" fill="#FFDE00"
+                              stroke="#FFDE00"
+                              stroke-opacity="0.98" stroke-width="2"/>
+                      </svg>
+                      <svg width="31" className="absolute bottom-0 left-0" height="30" viewBox="0 0 31 30" fill="none"
+                           xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 0L1 19.6054L10.211 28.2105L30.211 27.9997" stroke="#FFDE00" stroke-opacity="0.98"
+                              stroke-width="2"/>
+                      </svg>
 
-                    {item.icon}
+                      {item.icon}
 
-                    <div className="flex flex-col gap-y-4 text-[#FFDE00] max-w-[22rem]">
-                      <p className="text-[20px] font-bold">{item.title}</p>
-                      <p className="text-[15px]">{item.description}</p>
+                      <div className="flex flex-col gap-y-4 text-[#FFDE00] font-['tt'] max-w-[22rem]">
+                        <p className="text-[20px] font-bold">{item.title}</p>
+                        <p className="text-[15px]">{item.description}</p>
+                      </div>
+
                     </div>
+                    <div className="relative opacity-0 group-hover:opacity-100 transition-all duration-300 flex w-[21rem] h-[21rem] items-center">
+                      <svg width="333" height="299" className="scale-[1.2] mt-8 absolute inset-0" viewBox="0 0 333 299"
+                           fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="333" height="299" fill="#FFDE00"/>
+                        <path d="M2 277.5L21.3946 297H2V277.5Z" fill="black"/>
+                        <path d="M41 297H21.3946M21.3946 297L2 277.5M21.3946 297H2V277.5M2 277.5L2.2108 258"
+                              stroke="#FFDE00"
+                              stroke-opacity="0.98" stroke-width="2"/>
+                      </svg>
+                      <div className="text-black flex flex-col gap-y-6 w-full z-[999] relative">
+                        <p className="text-[18px] font-bold">Technology Stack:</p>
+                        <ul className="flex flex-col gap-y-2">
+                          {['Programming Languages: Python, Go', 'Frameworks/Libraries: PyTorch, TensorFlow, Scikit-learn', 'Databases: PostgreSQL, Redis, Elasticsearch', 'Infrastructure: Docker, Kubernetes, AWS/GCP', 'Security: RSA, AES encryption, Blockchain-based key management'].map((item, i) => (
+                              <li className="text-[15px] font-medium flex items-start gap-x-1" key={i}><p
+                                  className="text-[2rem] -mt-3.5 leading-none">.</p>
 
+                                {item}</li>
+                          ))}
+                        </ul>
+
+                      </div>
+                    </div>
                   </div>
+
               ))}
 
             </div>
-            <div className="relative flex w-[21rem] h-[21rem] items-center">
-              <svg width="333" height="299" className="scale-[1.2] mt-8 absolute inset-0" viewBox="0 0 333 299" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="333" height="299" fill="#FFDE00"/>
-                <path d="M2 277.5L21.3946 297H2V277.5Z" fill="black"/>
-                <path d="M41 297H21.3946M21.3946 297L2 277.5M21.3946 297H2V277.5M2 277.5L2.2108 258" stroke="#FFDE00"
-                      stroke-opacity="0.98" stroke-width="2"/>
-              </svg>
-              <div className="text-black flex flex-col gap-y-6 w-full z-[999] relative">
-                <p className="text-[18px] font-bold">Technology Stack:</p>
-                <ul className="flex flex-col gap-y-2">
-                  {['Programming Languages: Python, Go', 'Frameworks/Libraries: PyTorch, TensorFlow, Scikit-learn', 'Databases: PostgreSQL, Redis, Elasticsearch', 'Infrastructure: Docker, Kubernetes, AWS/GCP', 'Security: RSA, AES encryption, Blockchain-based key management'].map((item, i) => (
-                      <li className="text-[15px] font-medium flex items-start gap-x-1" key={i}><p className="text-[2rem] -mt-3.5 leading-none">.</p>
 
-                        {item}</li>
-                  ))}
-                </ul>
-
-              </div>
-            </div>
           </div>
         </section>
 
 
-          {/* Footer */}
+          {/* Footer */
+          }
           <footer className="bg-[#FFDE00] relative h-[55rem] px-[4rem] py-[3.5rem]">
             <div className="flex flex-col gap-y-[27px]">
               <p className="text-[68px] font-medium leading-[5rem]">Ready to accelerate <br/> your project? </p>
