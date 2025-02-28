@@ -526,7 +526,7 @@ function App() {
           </div>
           <div
               className="flex z-[999] relative mt-12 gap-x-[4rem] items-end justify-center scale-[0.995]  bg-[#FFDE00] w-[calc(100%-4.2rem)] mx-auto">
-            <p className="text-black text-[320px] font-['tt'] font-bold leading-none">
+            <p className="text-black text-[320px] font-['TTNormsPro-Regular, arial'] font-bold leading-none">
               $
               <AnimatedNumber end={10}/>
               M+
@@ -587,13 +587,13 @@ function App() {
 
                       {item.icon}
 
-                      <div className="flex flex-col gap-y-4 text-[#FFDE00] font-['tt'] max-w-[22rem]">
+                      <div className="flex flex-col gap-y-4 text-[#FFDE00] font-['TTNormsPro-Regular, arial'] max-w-[22rem]">
                         <p className="text-[20px] font-bold">{item.title}</p>
                         <p className="text-[15px]">{item.description}</p>
                       </div>
 
                     </div>
-                    <div className="relative opacity-0 group-hover:opacity-100 transition-all duration-300 flex w-[21rem] h-[21rem] items-center">
+                    <div className="relative opacity-0 -translate-x-[40px] group-hover:translate-x-0 group-hover:translate-y-0  translate-y-[40px] group-hover:opacity-100 transition-all duration-300 flex w-[21rem] h-[21rem] items-center">
                       <svg width="333" height="299" className="scale-[1.2] mt-8 absolute inset-0" viewBox="0 0 333 299"
                            fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="333" height="299" fill="#FFDE00"/>

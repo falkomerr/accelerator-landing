@@ -1,3 +1,5 @@
+@import './font/ttnormspro-regular.css';
+
 .frame-container {
   position: absolute;
   inset: 0;
@@ -85,9 +87,9 @@
   right: 0;
 }
 
-@font-face {
-  font-family: 'tt';
-  src: url('/ttnormspro-regular.ttf') format('ttf');
-  font-weight: normal;
-  font-style: normal;
+@keyframes fadeInLeft {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
 }
+
+
