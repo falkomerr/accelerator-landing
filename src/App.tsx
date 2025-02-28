@@ -1,6 +1,61 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './styles/animations.css';
 import './App.css';
+import { TypingAnimation } from './typing-animation.tsx';
+
+const stepTexts = [
+  {
+    title: 'Initial Evaluation',
+    description:
+      'Deep analysis of project concept, tokenomics potential, and technical requirements to build solid foundation.',
+  },
+  {
+    title: 'Token Architecture',
+    description:
+      'Designing advanced token mechanics, smart contracts architecture, and security protocols. Setting up development infrastructure.',
+  },
+  {
+    title: 'Strategy Development',
+    description:
+      'Creating comprehensive roadmap including token distribution, vesting schedules, and governance mechanisms.',
+  },
+  {
+    title: 'Technical Implementation',
+    description:
+      'Smart contract development, security audits, and technical documentation preparation.',
+  },
+  {
+    title: 'Project Packaging',
+    description:
+      'Creating compelling brand identity including:\n' +
+      '- Logo design\n' +
+      '- Visual guidelines\n' +
+      '- Website development\n' +
+      '- Platform UI/UX\n' +
+      '- Market positioning\n' +
+      '- Brand messaging',
+  },
+  {
+    title: 'Community Building',
+    description:
+      'Developing engagement strategy, building community infrastructure, and creating content pipeline.',
+  },
+  {
+    title: 'Marketing Preparation',
+    description:
+      'Creating marketing materials, establishing market presence, and building anticipation for launch.',
+  },
+  {
+    title: 'Token Launch',
+    description:
+      'Coordinating token launch, managing exchange listings, and implementing liquidity strategies.',
+  },
+  {
+    title: 'Post-Launch Support',
+    description:
+      'Ongoing market making through Valet MM, community management, and growth optimization.',
+  },
+];
 
 const arr = [
   {
@@ -258,14 +313,21 @@ function AnimatedNumber({
   return <span ref={numberRef}>{count}</span>;
 }
 
-function TypewriterText({ lines }: { lines: string[] }) {
+function TypewriterText({
+  lines,
+  className,
+  speed = 15,
+}: {
+  lines: string[];
+  className?: string;
+  speed?: number;
+}) {
   const containerRef = useRef<HTMLParagraphElement>(null);
   const isInView = useInView(containerRef);
   const [hasStarted, setHasStarted] = useState(false);
   const [displayedLines, setDisplayedLines] = useState<string[]>([]);
   const [currentLine, setCurrentLine] = useState(0);
   const [currentChar, setCurrentChar] = useState(0);
-  const speed = 15;
 
   useEffect(() => {
     if (isInView && !hasStarted) {
@@ -303,7 +365,11 @@ function TypewriterText({ lines }: { lines: string[] }) {
   return (
     <p
       ref={containerRef}
-      className="ml-[-40px] mt-8 h-[160px] font-['Unbounded'] text-[32px] text-[#FFDE00]">
+      className={
+        "ml-[-40px] mt-8 h-[160px] font-['Unbounded'] text-[32px] text-[#FFDE00]" +
+        ' ' +
+        className
+      }>
       {displayedLines.map((line, index) => (
         <React.Fragment key={index}>
           {line}
@@ -314,14 +380,20 @@ function TypewriterText({ lines }: { lines: string[] }) {
   );
 }
 
-function TypingText() {
-  const lines = [
+function TypingText({
+  lines = [
     'We turn ideas into successful ventures through',
     'strategic guidance, development support, and',
     'comprehensive market solutions',
-  ];
-
-  return <TypewriterText lines={lines} />;
+  ],
+  className = '',
+  speed = 15,
+}: {
+  lines?: string[];
+  className?: string;
+  speed?: number;
+}) {
+  return <TypewriterText lines={lines} className={className} speed={speed} />;
 }
 
 function App() {
@@ -424,15 +496,16 @@ function App() {
           </div>
           <div className="absolute bottom-0 left-0 mb-4 pl-8 md:mb-12 md:pl-16">
             <h1 className="font-['Alumni_Sans'] text-6xl font-bold leading-[1] md:text-[15rem]">
-              <span className="text-yellow-400">YOUR</span>
-              <span
+              <TypingAnimation text="YOUR" className="text-yellow-400" />
+              <TypingAnimation
+                text="SUCCESS"
                 className="-mt-6 block text-transparent md:-mt-20"
-                style={{ WebkitTextStroke: '2px #facc15' }}>
-                SUCCESS
-              </span>
-              <span className="-mt-6 block text-yellow-400 md:-mt-20">
-                CONCIERGE
-              </span>
+                style={{ WebkitTextStroke: '2px #facc15' }}
+              />
+              <TypingAnimation
+                text="CONCIERGE"
+                className="-mt-6 block text-yellow-400 md:-mt-20"
+              />
             </h1>
           </div>
           <div className="absolute bottom-0 right-0 md:w-1/2">
@@ -632,7 +705,9 @@ function App() {
         </section>
 
         {/* Steps Section */}
-        <section id="steps" className="relative min-h-screen text-white">
+        <section
+          id="steps"
+          className="relative z-[999] min-h-screen text-white">
           <div className="absolute inset-8">
             <img
               src="/steps.svg"
@@ -665,18 +740,45 @@ function App() {
                     className="absolute -left-16 h-12 w-12"
                   />
                   <h3 className="font-['Unbounded'] text-4xl font-bold text-[#000000]">
-                    Initial Evaluation
+                    {stepTexts[currentStep].title}
                   </h3>
                 </div>
-                <p className="font-['Unbounded'] text-xl text-[#000000]">
-                  Deep analysis of project concept,
-                  <br />
-                  tokenomics potential, and technical
-                  <br />
-                  requirements to build solid foundation.
+                <p className="max-w-[500px] font-['Unbounded'] text-xl text-[#000000]">
+                  {stepTexts[currentStep].description}
                 </p>
               </div>
             </div>
+            <svg
+              width="51"
+              onClick={() => setCurrentStep((prev) => prev - 1)}
+              height="51"
+              viewBox="0 0 51 51"
+              fill="none"
+              className="absolute -bottom-[35rem] left-[40%] z-[99999] cursor-pointer hover:opacity-90"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25.1038" cy="25.1038" r="25.1038" fill="#D3B904" />
+              <path
+                d="M34.5693 25.1038H15.6385M15.6385 25.1038L22.6346 18.1077M15.6385 25.1038L22.6346 32.1"
+                stroke="black"
+                stroke-width="1.64615"
+              />
+            </svg>
+
+            <svg
+              width="51"
+              onClick={() => setCurrentStep((prev) => prev + 1)}
+              height="51"
+              viewBox="0 0 51 51"
+              className="absolute -bottom-[35rem] left-[43%] z-[99999] cursor-pointer hover:opacity-90"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25.8961" cy="25.1038" r="25.1038" fill="#D3B904" />
+              <path
+                d="M16.4307 25.1038H35.3615M35.3615 25.1038L28.3654 18.1077M35.3615 25.1038L28.3654 32.1"
+                stroke="black"
+                stroke-width="1.64615"
+              />
+            </svg>
           </div>
         </section>
 
@@ -697,7 +799,7 @@ function App() {
             <img
               src="/body_block.svg"
               alt="Body Block diagram"
-              className="-z-10 -mt-4 h-full w-full scale-[1.01] object-contain outline-none"
+              className="-mt-4 h-full w-full scale-[1.01] object-contain outline-none"
             />
           </div>
           <div className="container relative z-10 mx-auto px-6 pt-[20rem]">
@@ -751,13 +853,13 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="relative z-[999] mx-auto mt-12 flex w-[calc(100%-4.2rem)] scale-[0.995] items-end justify-center gap-x-[4rem] bg-[#FFDE00]">
-            <p className="font-tt text-[320px] font-bold leading-none text-black">
-              $
+          <div className="relative z-[999] mx-auto mt-12 flex w-[calc(100%-4.2rem)] scale-[0.995] items-end gap-x-[4rem] bg-[#FFDE00] px-[8rem]">
+            <p className="font-tt flex text-[320px] font-bold leading-none text-black">
+              <p className="scale-[1.1] text-[340px]">$</p>
               <AnimatedNumber end={10} />
               M+
             </p>
-            <div className="mb-11 flex flex-col gap-y-1 font-['Unbounded'] text-[30px] text-black">
+            <div className="mb-14 flex flex-col gap-y-1 font-['Unbounded'] text-[30px] text-black">
               <svg
                 width="20"
                 height="20"
