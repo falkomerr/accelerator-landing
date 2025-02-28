@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './styles/animations.css';
+import './App.css';
 
 const arr = [
   {
@@ -751,7 +752,7 @@ function App() {
             </div>
           </div>
           <div className="relative z-[999] mx-auto mt-12 flex w-[calc(100%-4.2rem)] scale-[0.995] items-end justify-center gap-x-[4rem] bg-[#FFDE00]">
-            <p className="font-['TTNormsPro-Regular, arial'] text-[320px] font-bold leading-none text-black">
+            <p className="font-tt text-[320px] font-bold leading-none text-black">
               $
               <AnimatedNumber end={10} />
               M+
@@ -862,13 +863,13 @@ function App() {
 
                     {item.icon}
 
-                    <div className="font-['TTNormsPro-Regular, arial'] flex max-w-[22rem] flex-col gap-y-4 text-[#FFDE00]">
+                    <div className="font-tt flex max-w-[22rem] flex-col gap-y-4 text-[#FFDE00]">
                       <p className="text-[20px] font-bold">{item.title}</p>
                       <p className="text-[15px]">{item.description}</p>
                     </div>
                   </div>
                   <div className="h-[23rem] w-[34rem] overflow-hidden px-10">
-                    <div className="relative flex h-[23rem] w-[21rem] -translate-x-[2000px] translate-y-[1500px] items-center opacity-0 transition-all duration-[0.5s] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
+                    <div className="relative flex h-[23rem] w-[21rem] -translate-x-[200px] translate-y-[200px] items-center opacity-0 transition-all duration-[0.5s] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
                       <svg
                         width="333"
                         height="299"
@@ -963,7 +964,7 @@ function App() {
             </div>
           </div>
           <div className="absolute bottom-20 left-20 z-50 pr-8 md:pr-16">
-            <nav className="flex flex-col items-end space-y-2">
+            <nav className="flex flex-col items-start space-y-2">
               <a
                 href="#about"
                 className="menu-link-bottom font-['Unbounded'] text-base text-gray-500 hover:text-black md:text-lg">

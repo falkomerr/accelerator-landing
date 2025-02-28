@@ -1,5 +1,9 @@
 @import './font/ttnormspro-regular.css';
 
+.font-tt {
+  font-family: 'TTNormsPro-Regular', Arial, Helvetica, sans-serif !important;
+}
+
 .frame-container {
   position: absolute;
   inset: 0;
