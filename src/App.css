@@ -1,0 +1,96 @@
+// Удалить все эти стили
+.corner-frame { ... }
+.vector { ... }
+.vector1 { ... }
+.vector2 { ... }
+.vector3 { ... }
+.vector4 { ... }
+.vector1::before, .vector1::after { ... }
+// и так далее... 
+
+.frame-container {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.corner {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+
+.corner::before,
+.corner::after {
+  content: '';
+  position: absolute;
+  background: #FFDE00;
+}
+
+.top-left {
+  top: 40px;
+  left: 40px;
+}
+
+.top-left::before {
+  width: 100px;
+  height: 2px;
+}
+
+.top-left::after {
+  width: 2px;
+  height: 100px;
+}
+
+.top-right {
+  top: 40px;
+  right: 40px;
+}
+
+.top-right::before {
+  width: 100px;
+  height: 2px;
+  right: 0;
+}
+
+.top-right::after {
+  width: 2px;
+  height: 100px;
+  right: 0;
+}
+
+.bottom-left {
+  bottom: 40px;
+  left: 40px;
+}
+
+.bottom-left::before {
+  width: 2px;
+  height: 100px;
+  bottom: 0;
+}
+
+.bottom-left::after {
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+}
+
+.bottom-right {
+  bottom: 40px;
+  right: 40px;
+}
+
+.bottom-right::before {
+  width: 2px;
+  height: 100px;
+  bottom: 0;
+  right: 0;
+}
+
+.bottom-right::after {
+  width: 100px;
+  height: 2px;
+  bottom: 0;
+  right: 0;
+} 

@@ -1,0 +1,333 @@
+@keyframes waving {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  }
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.wave-animation {
+  animation: waving 2.5s ease infinite;
+  transform-origin: 70% 70%;
+}
+
+.mascot-container {
+  position: relative;
+}
+
+.hand {
+  position: absolute;
+  top: 35%;
+  left: 18%;
+  width: 15%;
+  height: 30%;
+  animation: waving 2.5s ease infinite;
+  transform-origin: bottom center;
+  background: url('/mascote-hand.png') no-repeat;
+  background-size: contain;
+}
+
+.menu-link {
+  position: relative;
+}
+
+.menu-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #facc15;
+  transition: width 0.3s ease;
+}
+
+.menu-link:hover::after {
+  width: 100%;
+}
+
+.cursor-glow {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(250, 204, 21, 0.15) 0%, rgba(250, 204, 21, 0) 70%);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  mix-blend-mode: screen;
+}
+
+.dot-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.8) 60%, black 100%),
+    radial-gradient(#facc15 1px, transparent 1px);
+  background-size: 100% 100%, 8px 8px;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up-1 {
+  animation: fadeUp 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-2 {
+  animation: fadeUp 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.animate-fade-up-3 {
+  animation: fadeUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.glitch-text {
+  position: relative;
+  animation: glitch 3s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0);
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -2px 0 #ff00c1;
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: 2px 0 #00fff9;
+  animation: glitch-anim2 3s infinite linear alternate-reverse;
+}
+
+.glitch-text-outline {
+  position: relative;
+  color: transparent;
+  animation: glitch 3s infinite;
+}
+
+.glitch-text-outline::before,
+.glitch-text-outline::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip: rect(0, 0, 0, 0);
+  -webkit-text-stroke: 2px #facc15;
+}
+
+@keyframes glitch {
+  0% {
+    transform: none;
+    opacity: 1;
+  }
+  7% {
+    transform: skew(-0.5deg, -0.9deg);
+    opacity: 0.75;
+  }
+  10% {
+    transform: none;
+    opacity: 1;
+  }
+  27% {
+    transform: none;
+    opacity: 1;
+  }
+  30% {
+    transform: skew(0.8deg, -0.1deg);
+    opacity: 0.75;
+  }
+  35% {
+    transform: none;
+    opacity: 1;
+  }
+  52% {
+    transform: none;
+    opacity: 1;
+  }
+  55% {
+    transform: skew(-1deg, 0.2deg);
+    opacity: 0.75;
+  }
+  50% {
+    transform: none;
+    opacity: 1;
+  }
+  72% {
+    transform: none;
+    opacity: 1;
+  }
+  75% {
+    transform: skew(0.4deg, 1deg);
+    opacity: 0.75;
+  }
+  80% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(64px, 9999px, 66px, 0);
+  }
+  5% {
+    clip: rect(30px, 9999px, 36px, 0);
+  }
+  10% {
+    clip: rect(87px, 9999px, 95px, 0);
+  }
+  15% {
+    clip: rect(55px, 9999px, 62px, 0);
+  }
+  20% {
+    clip: rect(49px, 9999px, 78px, 0);
+  }
+  25% {
+    clip: rect(45px, 9999px, 53px, 0);
+  }
+  30% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(82px, 9999px, 59px, 0);
+  }
+  5% {
+    clip: rect(15px, 9999px, 77px, 0);
+  }
+  10% {
+    clip: rect(68px, 9999px, 25px, 0);
+  }
+  15% {
+    clip: rect(54px, 9999px, 27px, 0);
+  }
+  20% {
+    clip: rect(35px, 9999px, 92px, 0);
+  }
+  25% {
+    clip: rect(25px, 9999px, 55px, 0);
+  }
+  30% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+  100% {
+    clip: rect(0, 9999px, 0, 0);
+  }
+}
+
+.typewriter-1,
+.typewriter-2,
+.typewriter-3 {
+  position: relative;
+  width: fit-content;
+  opacity: 0;
+}
+
+.typewriter-1::before,
+.typewriter-2::before,
+.typewriter-3::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: typewriter 1s steps(4) forwards;
+}
+
+.typewriter-1 {
+  animation: blink-cursor 0.8s steps(4) infinite, reveal 0s 1s forwards;
+}
+
+.typewriter-2 {
+  animation: blink-cursor 0.8s steps(7) infinite, reveal 0s 2s forwards;
+}
+
+.typewriter-2::before {
+  animation: typewriter 1.4s steps(7) 1s forwards;
+}
+
+.typewriter-3 {
+  animation: blink-cursor 0.8s steps(9) infinite, reveal 0s 3s forwards;
+}
+
+.typewriter-3::before {
+  animation: typewriter 1.8s steps(9) 2s forwards;
+}
+
+@keyframes typewriter {
+  to {
+    width: 0;
+  }
+}
+
+@keyframes blink-cursor {
+  to {
+    border-right: 0.2em solid #facc15;
+  }
+}
+
+@keyframes reveal {
+  to {
+    opacity: 1;
+  }
+} 
