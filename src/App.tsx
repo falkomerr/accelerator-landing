@@ -5,6 +5,10 @@ import { TypingAnimation } from './typing-animation.tsx';
 
 const stepTexts = [
   {
+    title: '',
+    description: '',
+  },
+  {
     title: 'Initial Evaluation',
     description:
       'Deep analysis of project concept, tokenomics potential, and technical requirements to build solid foundation.',
@@ -712,17 +716,17 @@ function App() {
               </div>
             </div>
             <div className="relative">
-              <h2 className="ml-28 mt-28 font-['Unbounded'] text-6xl font-bold text-[#FFDE00] transition-opacity duration-300">
+              <h2 className="ml-[6.275rem] mt-28 font-['Unbounded'] text-6xl font-bold text-[#FFDE00] transition-opacity duration-300">
                 STEP {currentStep}:
               </h2>
               <div className="absolute left-[40%] -mt-20">
                 <div className="mb-4 flex items-center">
                   <h3 className="font-['Unbounded'] text-4xl font-bold text-[#000000]">
-                    {stepTexts[currentStep].title}
+                    {stepTexts[currentStep]?.title}
                   </h3>
                 </div>
                 <p className="max-w-[500px] font-['Unbounded'] text-xl text-[#000000]">
-                  {stepTexts[currentStep].description}
+                  {stepTexts[currentStep]?.description}
                 </p>
               </div>
             </div>
@@ -1006,7 +1010,7 @@ function App() {
             <p className="text-[68px] font-medium leading-[5rem]">
               Ready to accelerate <br /> your project?{' '}
             </p>
-            <p className="text-[78px] font-bold">Let's talk.</p>
+            <p className="-mt-8 text-[78px] font-bold">Let's talk.</p>
             <div className="relative h-[80px] w-[490px]">
               <input className="absolute inset-0 inset-x-6 top-3 w-[calc(100%-7rem)] bg-transparent text-[29px] font-medium text-black !outline-0" />
               <svg
@@ -1033,7 +1037,7 @@ function App() {
 
               <svg
                 width="62"
-                className="absolute right-4 top-4 transition-all duration-300 hover:opacity-90"
+                className="absolute right-2.5 top-4 transition-all duration-300 hover:opacity-90"
                 height="62"
                 viewBox="0 0 62 62"
                 fill="none"
