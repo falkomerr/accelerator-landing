@@ -251,6 +251,13 @@ const arr = [
   },
 ];
 
+const servicesArr = [
+  {id: 1, title: 'Connections & Networking', description: 'Access our extensive network               of industry leaders, investors, and innovators. We bridge connections that matter for your project\'s success.'},
+  {id: 2, title: 'Funding Solutions', description: 'Strategic fundraising support from seed to scale. Our expertise spans traditional and innovative funding approaches, ensuring optimal capital structure for your venture.'},
+  {id: 3, title: 'Development Support', description: 'Technical excellence meets business acumen. From product architecture to deployment, we ensure your solution is built for success.'},
+  {id: 4, title: 'Marketing & Launch', description: 'Strategic brand development and market entry planning. We position your project for maximum impact and sustainable growth.'},
+]
+
 function useInView(ref: React.RefObject<HTMLElement>) {
   const [isInView, setIsInView] = useState(false);
 
@@ -370,7 +377,7 @@ function TypewriterText({
     <p
       ref={containerRef}
       className={
-        "ml-[-40px] mt-8 h-[160px] font-['Unbounded'] text-[32px] text-[#FFDE00]" +
+        "ml-[-40px] mt-8 h-[160px] font-['Unbounded'] text-[20px] max-md:px-16 md:text-[32px] text-[#FFDE00]" +
         ' ' +
         className
       }>
@@ -423,7 +430,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen bg-black">
+      <div className="min-h-screen max-w-[100vw] overflow-hidden bg-black">
         {/* Hero Section */}
         <div
           id="about"
@@ -432,7 +439,7 @@ function App() {
           <div className="dot-pattern"></div>
 
           {/* Navigation Menu */}
-          <div className="absolute right-0 top-20 z-50 pr-8 md:pr-16">
+          <div className="absolute right-0 top-20 z-50 pr-8 max-md:hidden md:pr-16">
             <nav className="flex flex-col items-end space-y-2">
               <a
                 href="#about"
@@ -462,7 +469,7 @@ function App() {
             </nav>
           </div>
 
-          <div className="absolute left-0 top-20 pl-8 md:pl-16">
+          <div className="absolute left-0 top-4 pl-8 md:top-20 md:pl-16">
             <p className="font-['Unbounded'] text-base text-white md:text-lg">
               * Incubation Fund
             </p>
@@ -473,33 +480,34 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 mb-4 pl-8 md:mb-12 md:pl-16">
-            <h1 className="font-['Alumni_Sans'] text-6xl font-bold leading-[1] md:text-[15rem]">
+          <div className="absolute bottom-0 left-0 z-[9999] mb-4 pl-8 md:mb-12 md:pl-16">
+            <h1 className="font-['Alumni_Sans'] text-6xl text-[8rem] font-bold leading-[1] md:text-[15rem]">
               <TypingAnimation
                 duration={100}
                 text="YOUR"
-                className="h-[240px] text-yellow-400"
+                className="text-yellow-400 md:h-[240px]"
               />
               <TypingAnimation
                 duration={100}
                 delayStartup={450}
                 text="SUCCESS"
-                className="-mt-6 block h-[240px] text-transparent md:-mt-20"
+                className="-mt-6 block text-transparent md:-mt-20 md:h-[240px]"
                 style={{ WebkitTextStroke: '2px #facc15' }}
               />
               <TypingAnimation
                 duration={100}
                 delayStartup={1100}
                 text="CONCIERGE"
-                className="-mt-6 block h-[240px] text-yellow-400 md:-mt-20"
+                className="-mt-6 block text-yellow-400 md:-mt-20 md:h-[240px]"
               />
             </h1>
           </div>
           <div className="absolute bottom-0 right-0 md:w-1/2">
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black to-70%"></div>
             <img
               src="/mascote.png"
               alt="Mascot"
-              className="mx-auto -ml-[100px] h-auto w-[42rem]"
+              className="mx-auto ml-[7rem] h-auto w-[42rem] md:-ml-[100px]"
             />
           </div>
         </div>
@@ -535,158 +543,34 @@ function App() {
             {/* Services Grid */}
             <div className="space-y-16">
               {/* Service 1 */}
-              <div className="group relative grid grid-cols-12 items-start border-b border-gray-800 pb-16">
-                <div className="absolute bottom-0 left-0 z-20 h-[1px] w-full origin-left scale-x-0 transform bg-yellow-400 transition-transform duration-500 ease-out group-hover:scale-x-100"></div>
-                <img
-                  src="/mascote2.png"
-                  alt="Mascot"
-                  className="absolute bottom-0 left-[400px] z-10 w-[400px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                />
-                <div className="col-span-1 font-['Unbounded'] font-normal text-gray-400 transition-colors group-hover:text-yellow-400">
-                  /01
-                </div>
-                <div className="absolute right-0 -mt-[2px] flex h-[24px] items-center">
+              {servicesArr.map((service) => (
+                <div className="group relative flex h-[250px] items-start gap-x-[450px] border-b border-gray-800 pb-16 max-md:gap-x-6">
+                  <div className="absolute bottom-0 left-0 z-20 h-[1px] w-full origin-left scale-x-0 transform bg-yellow-400 transition-transform duration-500 ease-out group-hover:scale-x-100"></div>
                   <img
-                    src="/arrow.svg"
-                    alt="Arrow"
-                    className="opacity-40 transition-opacity group-hover:opacity-100"
+                    src="/mascote2.png"
+                    alt="Mascot"
+                    className="absolute bottom-0 left-[100px] z-10 w-[400px] opacity-0 transition-opacity duration-500 group-hover:opacity-100 max-md:hidden"
                   />
-                </div>
-                <div className="col-span-5"></div>
-                <div className="col-span-2">
-                  <h3 className="font-['Unbounded'] text-xl text-gray-300 transition-colors group-hover:text-yellow-400">
-                    Connections
-                    <br />& Networking
-                  </h3>
-                </div>
-                <div className="col-span-3">
-                  <p className="font-['Unbounded'] text-base font-light text-gray-400 transition-colors group-hover:text-yellow-400">
-                    Access our extensive network
-                    <br />
-                    of industry leaders, investors,
-                    <br />
-                    and innovators. We bridge connections
-                    <br />
-                    that matter for your project's success.
+                  <p className="font-['Unbounded'] font-normal text-gray-400 transition-colors group-hover:text-yellow-400">
+                    /0{service.id}
                   </p>
+                  <div className="absolute right-0 -mt-[2px] flex h-[24px] items-center">
+                    <img
+                      src="/arrow.svg"
+                      alt="Arrow"
+                      className="opacity-40 transition-opacity group-hover:opacity-100"
+                    />
+                  </div>
+                  <div className="flex w-full flex-col justify-between gap-2 md:flex-row">
+                    <h3 className="font-['Unbounded'] text-xl text-gray-300 transition-colors group-hover:text-yellow-400 max-md:text-[12px]">
+                      {service.title}
+                    </h3>
+                    <p className="font-['Unbounded'] text-base font-light text-gray-400 transition-colors group-hover:text-yellow-400 max-md:text-[12px]">
+                      {service.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-
-              {/* Service 2 */}
-              <div className="group relative grid grid-cols-12 items-start border-b border-gray-800 pb-16">
-                <div className="absolute bottom-0 left-0 z-20 h-[1px] w-full origin-left scale-x-0 transform bg-yellow-400 transition-transform duration-500 ease-out group-hover:scale-x-100"></div>
-                <img
-                  src="/mascote2.png"
-                  alt="Mascot"
-                  className="absolute bottom-0 left-[400px] z-10 w-[400px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                />
-                <div className="col-span-1 font-['Unbounded'] font-normal text-gray-400 transition-colors group-hover:text-yellow-400">
-                  /02
-                </div>
-                <div className="absolute right-0 -mt-[2px] flex h-[24px] items-center">
-                  <img
-                    src="/arrow.svg"
-                    alt="Arrow"
-                    className="opacity-40 transition-opacity group-hover:opacity-100"
-                  />
-                </div>
-                <div className="col-span-5"></div>
-                <div className="col-span-2">
-                  <h3 className="font-['Unbounded'] text-xl text-gray-300 transition-colors group-hover:text-yellow-400">
-                    Funding
-                    <br />
-                    Solutions
-                  </h3>
-                </div>
-                <div className="col-span-3">
-                  <p className="font-['Unbounded'] text-base font-light text-gray-400 transition-colors group-hover:text-yellow-400">
-                    Strategic fundraising support
-                    <br />
-                    from seed to scale. Our expertise
-                    <br />
-                    spans traditional and innovative
-                    <br />
-                    funding approaches for your venture.
-                  </p>
-                </div>
-              </div>
-
-              {/* Service 3 */}
-              <div className="group relative grid grid-cols-12 items-start border-b border-gray-800 pb-16">
-                <div className="absolute bottom-0 left-0 h-[1px] w-full origin-left scale-x-0 transform bg-yellow-400 transition-transform duration-500 ease-out group-hover:scale-x-100"></div>
-                <img
-                  src="/mascote2.png"
-                  alt="Mascot"
-                  className="absolute bottom-0 left-[400px] -z-10 w-[400px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                />
-                <div className="col-span-1 font-['Unbounded'] font-normal text-gray-400 transition-colors group-hover:text-yellow-400">
-                  /03
-                </div>
-                <div className="absolute right-0 -mt-[2px] flex h-[24px] items-center">
-                  <img
-                    src="/arrow.svg"
-                    alt="Arrow"
-                    className="opacity-40 transition-opacity group-hover:opacity-100"
-                  />
-                </div>
-                <div className="col-span-5"></div>
-                <div className="col-span-2">
-                  <h3 className="font-['Unbounded'] text-xl text-gray-300 transition-colors group-hover:text-yellow-400">
-                    Development
-                    <br />
-                    Support
-                  </h3>
-                </div>
-                <div className="col-span-3">
-                  <p className="font-['Unbounded'] text-base font-light text-gray-400 transition-colors group-hover:text-yellow-400">
-                    Technical excellence meets
-                    <br />
-                    business acumen. From product
-                    <br />
-                    architecture to deployment, we
-                    <br />
-                    ensure your solution's success.
-                  </p>
-                </div>
-              </div>
-
-              {/* Service 4 */}
-              <div className="group relative grid grid-cols-12 items-start border-b border-gray-800 pb-16">
-                <div className="absolute bottom-0 left-0 h-[1px] w-full origin-left scale-x-0 transform bg-yellow-400 transition-transform duration-500 ease-out group-hover:scale-x-100"></div>
-                <img
-                  src="/mascote2.png"
-                  alt="Mascot"
-                  className="absolute bottom-0 left-[400px] -z-10 w-[400px] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-                />
-                <div className="col-span-1 font-['Unbounded'] font-normal text-gray-400 transition-colors group-hover:text-yellow-400">
-                  /04
-                </div>
-                <div className="absolute right-0 -mt-[2px] flex h-[24px] items-center">
-                  <img
-                    src="/arrow.svg"
-                    alt="Arrow"
-                    className="opacity-40 transition-opacity group-hover:opacity-100"
-                  />
-                </div>
-                <div className="col-span-5"></div>
-                <div className="col-span-2">
-                  <h3 className="font-['Unbounded'] text-xl text-gray-300 transition-colors group-hover:text-yellow-400">
-                    Marketing
-                    <br />& Launch
-                  </h3>
-                </div>
-                <div className="col-span-3">
-                  <p className="font-['Unbounded'] text-base font-light text-gray-400 transition-colors group-hover:text-yellow-400">
-                    Strategic brand development
-                    <br />
-                    and market entry planning. We
-                    <br />
-                    position your project for maximum
-                    <br />
-                    impact and sustainable growth.
-                  </p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -694,8 +578,8 @@ function App() {
         {/* Steps Section */}
         <section
           id="steps"
-          className="relative z-[999] min-h-screen text-white">
-          <div className="absolute inset-8">
+          className="relative z-[999] px-4 text-white max-md:text-[#FFDE00] md:min-h-screen">
+          <div className="absolute inset-8 max-md:hidden">
             <img
               src="/steps.svg"
               alt="Steps diagram"
@@ -707,72 +591,94 @@ function App() {
               className="absolute bottom-0 right-0 h-auto w-[900px]"
             />
           </div>
-          <div className="relative z-10 py-14 pl-8 pr-8 md:pl-16 md:pr-16">
-            <div className="group relative">
-              <div className="flex items-center justify-between">
-                <p className="ml-8 font-['Unbounded'] text-xl text-[#000000]">
-                  (STEPS SECTION)
-                </p>
-              </div>
-            </div>
-            <div className="relative">
-              <h2 className="ml-[6.275rem] mt-28 font-['Unbounded'] text-6xl font-bold text-[#FFDE00] transition-opacity duration-300">
-                STEP {currentStep}:
-              </h2>
-              <div className="absolute left-[40%] -mt-20">
-                <div className="mb-4 flex items-center">
-                  <h3 className="font-['Unbounded'] text-4xl font-bold text-[#000000]">
-                    {stepTexts[currentStep]?.title}
-                  </h3>
+          <div className="relative z-10 flex-col gap-y-14 max-md:flex max-md:bg-[#FFDE00] md:px-16 md:py-14">
+            <div className="flex-col gap-y-14 pb-0 max-md:flex max-md:px-8 max-md:py-14">
+              <div className="group relative">
+                <div className="flex items-center justify-between">
+                  <p className="font-['Unbounded'] text-xl text-[#000000] md:ml-8">
+                    (STEPS <span className="max-md:hidden">SECTION</span>)
+                  </p>
                 </div>
-                <p className="max-w-[500px] font-['Unbounded'] text-xl text-[#000000]">
-                  {stepTexts[currentStep]?.description}
-                </p>
+              </div>
+              <div className="relative h-fit w-full">
+                <h2 className="ml-[6.275rem] mt-28 font-['Unbounded'] text-6xl font-bold text-[#FFDE00] transition-opacity duration-300 max-md:hidden">
+                  STEP {currentStep}:
+                </h2>
+                <div className="left-[40%] md:absolute md:-mt-20">
+                  <div className="mb-4 flex items-center">
+                    <h3 className="font-['Unbounded'] text-4xl font-bold text-[#000000]">
+                      {stepTexts[currentStep]?.title}
+                    </h3>
+                  </div>
+                  <p className="max-w-[500px] font-['Unbounded'] text-xl text-[#000000]">
+                    {stepTexts[currentStep]?.description}
+                  </p>
+                </div>
+              </div>
+              <div className="max-md:flex">
+                <svg
+                  width="51"
+                  onClick={() =>
+                    setCurrentStep((prev) => (prev > 1 ? prev - 1 : prev))
+                  }
+                  height="51"
+                  viewBox="0 0 51 51"
+                  fill="none"
+                  className="-bottom-[35rem] left-[40%] z-[99999] cursor-pointer hover:opacity-90 md:absolute"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle
+                    cx="25.1038"
+                    cy="25.1038"
+                    r="25.1038"
+                    fill="#D3B904"
+                  />
+                  <path
+                    d="M34.5693 25.1038H15.6385M15.6385 25.1038L22.6346 18.1077M15.6385 25.1038L22.6346 32.1"
+                    stroke="black"
+                    strokeWidth="1.64615"
+                  />
+                </svg>
+
+                <svg
+                  width="51"
+                  onClick={() =>
+                    setCurrentStep((prev) =>
+                      prev + 1 < stepTexts.length ? prev + 1 : prev,
+                    )
+                  }
+                  height="51"
+                  viewBox="0 0 51 51"
+                  className="-bottom-[35rem] left-[43%] z-[99999] cursor-pointer hover:opacity-90 md:absolute"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle
+                    cx="25.8961"
+                    cy="25.1038"
+                    r="25.1038"
+                    fill="#D3B904"
+                  />
+                  <path
+                    d="M16.4307 25.1038H35.3615M35.3615 25.1038L28.3654 18.1077M35.3615 25.1038L28.3654 32.1"
+                    stroke="black"
+                    strokeWidth="1.64615"
+                  />
+                </svg>
               </div>
             </div>
-            <svg
-              width="51"
-              onClick={() =>
-                setCurrentStep((prev) => (prev > 1 ? prev - 1 : prev))
-              }
-              height="51"
-              viewBox="0 0 51 51"
-              fill="none"
-              className="absolute -bottom-[35rem] left-[40%] z-[99999] cursor-pointer hover:opacity-90"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25.1038" cy="25.1038" r="25.1038" fill="#D3B904" />
-              <path
-                d="M34.5693 25.1038H15.6385M15.6385 25.1038L22.6346 18.1077M15.6385 25.1038L22.6346 32.1"
-                stroke="black"
-                strokeWidth="1.64615"
-              />
-            </svg>
 
-            <svg
-              width="51"
-              onClick={() =>
-                setCurrentStep((prev) =>
-                  prev + 1 < stepTexts.length ? prev + 1 : prev,
-                )
-              }
-              height="51"
-              viewBox="0 0 51 51"
-              className="absolute -bottom-[35rem] left-[43%] z-[99999] cursor-pointer hover:opacity-90"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <circle cx="25.8961" cy="25.1038" r="25.1038" fill="#D3B904" />
-              <path
-                d="M16.4307 25.1038H35.3615M35.3615 25.1038L28.3654 18.1077M35.3615 25.1038L28.3654 32.1"
-                stroke="black"
-                strokeWidth="1.64615"
+            <div className="relative -mt-40 max-h-[350px] w-[calc(100vw-2rem)] overflow-hidden px-4 md:hidden">
+              <img
+                src="/mascote.png"
+                alt="Mascot"
+                className="mx-auto ml-[6.5rem] h-auto w-[42rem] md:-ml-[100px]"
               />
-            </svg>
+            </div>
           </div>
         </section>
 
         {/* Head Block Section */}
-        <section className="relative -mt-[28.6rem] min-h-screen select-none text-white">
-          <div className="absolute inset-8 px-4">
+        <section className="relative max-md:hidden -mt-[28.6rem] min-h-screen select-none text-white">
+          <div className="absolute inset-y-8 px-4 md:inset-8">
             <img
               src="/head_block.svg"
               alt="Head Block diagram"
@@ -782,22 +688,44 @@ function App() {
         </section>
 
         {/* Body Block Section */}
-        <section className="relative -mt-[47.2rem] min-h-screen text-white">
-          <div className="absolute inset-8 px-4">
+        <section className="relative md:-mt-[47.2rem] min-h-screen text-white">
+          <div className="absolute max-md:mt-6 max-md:w-full inset-y-8 md:inset-8 px-4">
             <img
               src="/body_block.svg"
               alt="Body Block diagram"
-              className="-mt-4 h-full w-full scale-[1.01] object-contain outline-none"
+              className="-mt-4 h-full w-full scale-[1.01] object-contain outline-none max-md:hidden"
             />
+            <svg
+              width="411"
+              height="970"
+              viewBox="0 0 411 970"
+              fill="none"
+              className="md:hidden h-full w-full object-cover scale-x-[1.37] scale-y-[1.1]"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M8.6051 0.000478745H29.2108L401.895 0L410.5 9.211L410.29 29.1763V29.1878V66.5L0 66.5005V29.2115V9.21148L8.6051 0.000478745Z"
+                fill="#FFDE00"
+              />
+              <path
+                d="M1 309L1 66.5H409.29V309M1 309H212.5H409.29M1 309L1 541M409.29 309V541M1 541L1 773H212.5H409.29V541M1 541H409.29"
+                stroke="#FFDE00"
+                stroke-opacity="0.98"
+                stroke-width="2"
+              />
+              <path
+                d="M8.6051 970H370.395H390H409.395L410.29 950.5V773H0V960.789L8.6051 970Z"
+                fill="#FFDE00"
+              />
+            </svg>
           </div>
-          <div className="container relative z-10 mx-auto select-none px-6 pt-[20rem]">
+          <div className="container relative z-10 max-md:flex max-md:flex-col mx-auto select-none px-6 pt-[4rem] md:pt-[20rem]">
             <TypingText />
-            <div className="mt-48 grid grid-cols-2 gap-32">
-              <div className="ml-[-40px]">
-                <p className="font-['Unbounded'] text-[320px] font-bold leading-none text-[#FFDE00]">
+            <div className="md:mt-48 grid grid-cols-1 mt-20 max-md:gap-y-[2rem] md:grid-cols-2">
+              <div className="md:ml-[-40px] ml-[3rem]">
+                <p className="font-['Unbounded'] text-[150px] md:text-[320px] font-bold leading-none text-[#FFDE00]">
                   <AnimatedNumber end={45} />+
                 </p>
-                <div className="mt-4">
+                <div className="md:mt-4">
                   <svg
                     width="20"
                     height="20"
@@ -808,19 +736,19 @@ function App() {
                     <path d="M0 19.5L19.3946 0H0V19.5Z" fill="#FFDE00" />
                   </svg>
 
-                  <p className="font-['Unbounded'] text-2xl text-[#FFDE00]">
+                  <p className="font-['Unbounded'] text-base md:text-2xl text-[#FFDE00]">
                     Successful
                   </p>
-                  <p className="font-['Unbounded'] text-2xl text-[#FFDE00]">
+                  <p className="font-['Unbounded'] text-base md:text-2xl text-[#FFDE00]">
                     Token Launches
                   </p>
                 </div>
               </div>
-              <div>
-                <p className="font-['Unbounded'] text-[320px] font-bold leading-none text-[#FFDE00]">
+              <div className="ml-[3rem]">
+                <p className="font-['Unbounded'] text-[150px] md:text-[320px] font-bold leading-none text-[#FFDE00]">
                   <AnimatedNumber end={80} />+
                 </p>
-                <div className="mt-4">
+                <div className="md:mt-4">
                   <svg
                     width="20"
                     height="20"
@@ -831,23 +759,23 @@ function App() {
                     <path d="M0 19.5L19.3946 0H0V19.5Z" fill="#FFDE00" />
                   </svg>
 
-                  <p className="font-['Unbounded'] text-2xl text-[#FFDE00]">
+                  <p className="font-['Unbounded'] text-base md:text-2xl text-[#FFDE00]">
                     Projects
                   </p>
-                  <p className="font-['Unbounded'] text-2xl text-[#FFDE00]">
+                  <p className="font-['Unbounded'] text-base md:text-2xl text-[#FFDE00]">
                     Supported
                   </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="relative z-[999] mx-auto mt-12 flex w-[calc(100%-4.2rem)] scale-[0.995] items-end gap-x-[4rem] bg-[#FFDE00] px-[8rem]">
-            <p className="font-tt flex text-[320px] font-bold leading-none text-black">
-              <p className="scale-[1.1] text-[340px]">$</p>
+          <div className="relative max-md:pl-8 z-[999] mx-auto md:mt-12 flex w-[calc(100%-3.5rem)] md:w-[calc(100%-4.2rem)] scale-[0.995] items-end gap-x-[4rem] bg-[#FFDE00] max-md:flex-col max-md:items-start md:px-[8rem]">
+            <p className="font-tt mt-2 w-full flex text-[120px] md:text-[320px] font-bold leading-none text-black">
+              <p className="scale-[1.1] text-[110px] md:text-[340px]">$</p>
               <AnimatedNumber end={10} />
               M+
             </p>
-            <div className="mb-14 flex flex-col gap-y-1 font-['Unbounded'] text-[30px] text-black">
+            <div className="md:mb-14 mt-2 flex flex-col gap-y-1 font-['Unbounded'] text-[30px] text-black">
               <svg
                 width="20"
                 height="20"
@@ -859,7 +787,7 @@ function App() {
                   fill="black"
                 />
               </svg>
-              <p>
+              <p className="max-md:text-base">
                 Total Funds <br /> Raised
               </p>
             </div>
@@ -867,8 +795,8 @@ function App() {
         </section>
 
         {/* Benefits Section */}
-        <section id="benefits" className="relative bg-black px-40 py-20">
-          <div className="container relative z-10 mx-auto px-6">
+        <section id="benefits" className="relative bg-black md:px-40 py-20">
+          <div className="container relative z-10 max-md:px-[10rem] mx-auto px-6">
             <svg
               width="1312"
               height="28"
@@ -888,11 +816,11 @@ function App() {
               <path d="M1 27H1311" stroke="#FFDE00" />
             </svg>
           </div>
-          <div className="mt-[2rem] flex w-full gap-x-[8rem]">
+          <div className="mt-[2rem] px-8 flex w-full gap-x-[8rem]">
             <div className="flex flex-col gap-y-[2rem]">
               {arr.map((item, i) => (
                 <div key={i} className="group flex w-full gap-x-40">
-                  <div className="relative flex w-[800px] gap-x-24 px-[4rem] py-[5rem]">
+                  <div className="relative max-md:flex-col flex md:w-[800px] gap-x-24 px-[4rem] py-[5rem]">
                     <svg
                       width="30"
                       className="absolute left-0 top-0"
@@ -958,7 +886,7 @@ function App() {
                       <p className="text-[15px]">{item.description}</p>
                     </div>
                   </div>
-                  <div className="h-[23rem] w-[34rem] overflow-hidden px-10">
+                  <div className="h-[23rem] max-md:hidden w-[34rem] overflow-hidden px-10">
                     <div className="relative flex h-[23rem] w-[21rem] -translate-x-[200px] translate-y-[200px] items-center opacity-0 transition-all duration-[0.5s] group-hover:translate-x-0 group-hover:translate-y-0 group-hover:opacity-100">
                       <svg
                         width="333"
@@ -1085,7 +1013,7 @@ function App() {
           <img
             src="/step1.png"
             alt="Step 1 illustration"
-            className="absolute bottom-0 right-0 h-auto w-[900px]"
+            className="absolute bottom-0 right-0 max-md:hidden h-auto w-[900px]"
           />
         </footer>
       </div>
