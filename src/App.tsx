@@ -377,7 +377,7 @@ function TypewriterText({
     <p
       ref={containerRef}
       className={
-        "ml-[-40px] mt-8 h-[160px] font-['Unbounded'] text-[20px] max-md:px-16 md:text-[32px] text-[#FFDE00]" +
+        "ml-[-40px] mt-8 h-[160px] font-['Unbounded'] text-[18px] max-md:px-16 md:text-[32px] text-[#FFDE00]" +
         ' ' +
         className
       }>
@@ -430,7 +430,7 @@ function App() {
 
   return (
     <>
-      <div className="min-h-screen max-w-[100vw] overflow-hidden bg-black">
+      <div className="min-h-screen max-w-[100vw] overflow-x-hidden bg-black">
         {/* Hero Section */}
         <div
           id="about"
@@ -474,14 +474,14 @@ function App() {
               * Incubation Fund
             </p>
             <div className="mt-8 max-w-md">
-              <p className="font-['Unbounded'] text-base text-white md:text-lg">
+              <p className="font-['Unbounded'] max-md:pr-4 text-base text-white md:text-lg">
                 From concept to market - we provide end-to-end support for
                 ambitious projects
               </p>
             </div>
           </div>
           <div className="absolute bottom-0 left-0 z-[9999] mb-4 pl-8 md:mb-12 md:pl-16">
-            <h1 className="font-['Alumni_Sans'] text-6xl text-[8rem] font-bold leading-[1] md:text-[15rem]">
+            <h1 className="font-['Alumni_Sans']  text-[6rem] font-bold leading-[1] md:text-[15rem]">
               <TypingAnimation
                 duration={100}
                 text="YOUR"
@@ -503,7 +503,7 @@ function App() {
             </h1>
           </div>
           <div className="absolute bottom-0 right-0 md:w-1/2">
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black to-70%"></div>
+            <div className="absolute inset-0 md:hidden bg-gradient-to-b from-transparent to-black to-70%"></div>
             <img
               src="/mascote.png"
               alt="Mascot"
@@ -689,7 +689,7 @@ function App() {
 
         {/* Body Block Section */}
         <section className="relative md:-mt-[47.2rem] min-h-screen text-white">
-          <div className="absolute max-md:mt-6 max-md:w-full inset-y-8 md:inset-8 px-4">
+          <div className="absolute max-md:mt-8 max-md:w-full inset-y-8 md:inset-8 px-4">
             <img
               src="/body_block.svg"
               alt="Body Block diagram"
@@ -700,7 +700,7 @@ function App() {
               height="970"
               viewBox="0 0 411 970"
               fill="none"
-              className="md:hidden h-full w-full object-cover scale-x-[1.37] scale-y-[1.1]"
+              className="md:hidden h-full w-full object-cover scale-x-[1.1] scale-y-[1.1]"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M8.6051 0.000478745H29.2108L401.895 0L410.5 9.211L410.29 29.1763V29.1878V66.5L0 66.5005V29.2115V9.21148L8.6051 0.000478745Z"
@@ -721,8 +721,8 @@ function App() {
           <div className="container relative z-10 max-md:flex max-md:flex-col mx-auto select-none px-6 pt-[4rem] md:pt-[20rem]">
             <TypingText />
             <div className="md:mt-48 grid grid-cols-1 mt-20 max-md:gap-y-[2rem] md:grid-cols-2">
-              <div className="md:ml-[-40px] ml-[3rem]">
-                <p className="font-['Unbounded'] text-[150px] md:text-[320px] font-bold leading-none text-[#FFDE00]">
+              <div className="md:ml-[-40px] ml-[2rem]">
+                <p className="font-['Unbounded'] text-[120px] md:text-[320px] font-bold leading-none text-[#FFDE00]">
                   <AnimatedNumber end={45} />+
                 </p>
                 <div className="md:mt-4">
@@ -744,8 +744,8 @@ function App() {
                   </p>
                 </div>
               </div>
-              <div className="ml-[3rem]">
-                <p className="font-['Unbounded'] text-[150px] md:text-[320px] font-bold leading-none text-[#FFDE00]">
+              <div className="ml-[2rem]">
+                <p className="font-['Unbounded'] text-[120px] md:text-[320px] font-bold leading-none text-[#FFDE00]">
                   <AnimatedNumber end={80} />+
                 </p>
                 <div className="md:mt-4">
@@ -769,13 +769,13 @@ function App() {
               </div>
             </div>
           </div>
-          <div className="relative max-md:pl-8 z-[999] mx-auto md:mt-12 flex w-[calc(100%-3.5rem)] md:w-[calc(100%-4.2rem)] scale-[0.995] items-end gap-x-[4rem] bg-[#FFDE00] max-md:flex-col max-md:items-start md:px-[8rem]">
+          <div className="relative max-md:pl-8 z-[999] mx-auto md:mt-12 flex w-[calc(100%-1rem)] md:w-[calc(100%-4.2rem)] scale-[0.995] items-end gap-x-[4rem] md:bg-[#FFDE00] max-md:flex-col max-md:items-start md:px-[8rem]">
             <p className="font-tt mt-2 w-full flex text-[120px] md:text-[320px] font-bold leading-none text-black">
-              <p className="scale-[1.1] text-[110px] md:text-[340px]">$</p>
+              <p className="md:scale-[1.1] max-md:mt-2 text-[110px] md:text-[340px]">$</p>
               <AnimatedNumber end={10} />
               M+
             </p>
-            <div className="md:mb-14 mt-2 flex flex-col gap-y-1 font-['Unbounded'] text-[30px] text-black">
+            <div className="md:mb-14 mt-2 px-4 flex flex-col gap-y-1 font-['Unbounded'] text-[30px] text-black">
               <svg
                 width="20"
                 height="20"
@@ -787,7 +787,7 @@ function App() {
                   fill="black"
                 />
               </svg>
-              <p className="max-md:text-base">
+              <p className="max-md:text-base ">
                 Total Funds <br /> Raised
               </p>
             </div>
